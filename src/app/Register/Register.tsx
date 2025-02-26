@@ -1,19 +1,19 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@radix-ui/react-label";
 
 const Register = () => {
   return (
     <Card className="flex justify-center items-center min-h-screen bg-gray-50">
-      <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-sm">
+      <div className="bg-white rounded-lg shadow-md w-full max-w-sm">
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center text-gray-700 mb-6">
             Register
           </CardTitle>
         </CardHeader>
 
-        <form className="space-y-4">
+        <form className="space-y-4 px-6">
           <div>
             <Label
               htmlFor="text"
@@ -60,14 +60,15 @@ const Register = () => {
               className="w-full"
             />
           </div>
-
+        </form>
+        <CardFooter>
           <Button
             type="submit"
-            className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700"
+            className="w-full mt-5 bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700"
           >
             Register
           </Button>
-        </form>
+        </CardFooter>
       </div>
     </Card>
   );

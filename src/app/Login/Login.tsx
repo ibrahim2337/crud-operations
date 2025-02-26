@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Link } from "react-router-dom";
@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Login = () => {
   return (
     <Card className="flex justify-center items-center min-h-screen bg-gray-50">
-      <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-sm">
+      <div className="bg-white px-6 rounded-lg shadow-md w-full max-w-sm">
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center text-gray-700 mb-6">
             Login
@@ -53,15 +53,17 @@ const Login = () => {
           >
             Login
           </Button>
-          <p className="text-sm font-semibold text-center mt-4">
-            Don&apos;t have an account?{" "}
-            <Link
-              to="/register"
-              className="text-blue-700 bg-white text-sm font-semibold underline"
-            >
-              Register Now
-            </Link>
-          </p>
+          <CardFooter>
+            <p className="text-sm font-semibold text-center mt-4">
+              Don&apos;t have an account?{" "}
+              <Link
+                to="/register"
+                className="text-blue-700   bg-white text-sm font-semibold underline"
+              >
+                Register Now
+              </Link>
+            </p>
+          </CardFooter>
         </form>
       </div>
     </Card>
